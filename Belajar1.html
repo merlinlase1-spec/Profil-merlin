@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERLIN LASE | Official Website</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #b0c4ff 0%, #e2d1ff 50%, #f7d6ff 100%);
+            --accent-purple: #7b61ff;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #2d3436;
+            padding-bottom: 50px;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            background: rgba(255, 255, 255, 0.7) !important;
+            backdrop-filter: blur(15px);
+            border-radius: 0 0 25px 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .navbar-brand { 
+    font-weight: 800; 
+    /* Mengubah warna teks judul menjadi pink */
+    color: #ff8da1 !important; 
+}
+
+        /* --- HERO BANNER (KOTAK UNGU/BIRU) --- */
+.hero-banner {
+    /* Ganti baris background: linear-gradient(...) dengan kode di bawah ini: */
+    background-image: url('merlin19.jpg'); 
+    background-size: cover;      /* Agar foto menutupi seluruh kotak */
+    background-position: center; /* Agar foto tetap di tengah */
+    
+    border-radius: 35px;
+    padding: 30px;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    margin-top: 100px;
+    text-align: center;
+    position: relative; /* Tambahan agar posisi rapi */
+    overflow: hidden;   /* Agar gambar tidak keluar dari lengkungan kotak */
+}
+        /* --- TEKS BERJALAN --- */
+        .marquee-container {
+            background: rgba(0, 0, 0, 0.2);
+            color: #000000;
+            padding: 8px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* --- VIDEO CONTAINER --- */
+        .video-box {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 25px;
+            overflow: hidden;
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        video { width: 100%; display: block; }
+
+        /* --- SOSIAL MEDIA --- */
+        .sosmed-box {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+        .sosmed-link {
+            font-size: 2.2rem;
+            color: white;
+            transition: 0.4s;
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+        }
+        .sosmed-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            color: #f7d6ff;
+        }
+
+        .glass-section {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 30px;
+            margin-top: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">MERLIN LASE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#menu">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="content.html">content</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="galeri2.html" id="galeriDrop" data-bs-toggle="dropdown">Galeri</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item fw-bold" href="galeri2.html">📸 Foto</a></li>
+                            <li><a class="dropdown-item fw-bold" href="video1.html">🎥 Video</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="menu">
+        <div class="hero-banner">
+            <div class="marquee-container">
+                <marquee scrollamount="7">WELCOME TO MY WEBSITE  | MERLIN LASE | XII TKJ 2 | Teknik Komputer Dan Jaringan | Tahun Pelajaran 2025/2026</marquee>
+            </div>
+
+            <h1 class="fw-extrabold mb-4">Video</h1>
+
+            <div class="video-box">
+                <video autoplay muted loop playsinline controls id="myvideo">
+                    <source src="video4.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="sosmed-box">
+                <a href="https://www.instagram.com/merlin_lse16" class="sosmed-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100081144963420" class="sosmed-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="sosmed-link"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+
+<div class="glass-section text-center" id="tentang" style="background: #ffc0cb !important; border: 10px solid white !important; backdrop-filter: none; padding: 40px 20px;">
+    
+    <h2 class="fw-bold" style="color: #000000 !important; margin-bottom: 25px;">XII TKJ 2</h2>
+    
+<div style="background: white; padding: 10px 10px 40px 10px; width: 250px; margin: 0 auto; box-shadow: 0 10px 20px rgba(0,0,0,0.2); border: 1px solid #ddd;">
+        
+        <div style="width: 100%; height: 200px; background: black; overflow: hidden;">
+            <img src="merlin4.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Foto Merlin">
+        </div>
+        
+    </div>
+</div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

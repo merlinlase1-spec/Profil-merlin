@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Fotbar Kelas | Merlin Lase</title>
+    
+    <style>
+        body {
+    /* Ganti 'merlin1.jpg' dengan nama file foto kamu di Acode */
+    background-image: url('merlin28.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+    margin: 0;
+    min-height: 100vh;
+}
+
+        /* Bingkai Foto Estetik */
+        .photo-frame {
+            position: relative;
+            width: 280px;
+            height: 200px;
+            background: white;
+            padding: 10px 10px 40px 10px; /* Bagian bawah lebih lebar seperti kertas foto asli */
+            box-shadow: 5px 10px 20px rgba(0,0,0,0.3);
+            border: 1px solid #ddd;
+            transition: transform 0.3s;
+        }
+
+        /* Bagian Hitam Tempat Foto (Sesuai Permintaanmu) */
+        .photo-content {
+            width: 100%;
+            height: 100%;
+            background: black;
+            overflow: hidden;
+        }
+
+        .photo-content img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Efek Posisi Miring Berbeda-beda agar Estetik */
+        .frame-1 { transform: rotate(-3deg); }
+        .frame-2 { transform: rotate(4deg); }
+        .frame-3 { transform: rotate(-2deg); }
+        .frame-4 { transform: rotate(5deg); }
+        .frame-5 { transform: rotate(-4deg); }
+        .frame-6 { transform: rotate(2deg); }
+
+        .photo-frame:hover {
+            transform: scale(1.1) rotate(0deg);
+            z-index: 10;
+        }
+
+        /* Hiasan Bunga (Gambar Dekorasi) */
+        .flower {
+            position: absolute;
+            width: 60px;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .flower-red { bottom: -20px; left: -20px; }
+        .flower-orange { top: -20px; right: -20px; }
+
+    </style>
+</head>
+<body>
+
+    <div class="photo-frame frame-1">
+        <div class="photo-content">
+            <img src="merlin4.jpg" alt="Fotbar">
+        </div>
+        <img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower flower-orange">
+    </div>
+
+    <div class="photo-frame frame-2">
+        <div class="photo-content">
+            <img src="merlin10.jpg" alt="Fotbar">
+        </div>
+    </div>
+
+    <div class="photo-frame frame-3">
+        <div class="photo-content">
+            <img src="merlin7.jpg" alt="Fotbar">
+        </div>
+        <img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower flower-red">
+    </div>
+    <div class="photo-frame frame-4">
+        <div class="photo-content">
+            <img src="merlin25.jpg" alt="Fotbar">
+        </div>
+                <img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower flower-red">
+        </div>
+
+    <div class="photo-frame frame-4">
+        <div class="photo-content">
+            <img src="merlin6.jpg" alt="Fotbar">
+            
+        </div>
+    </div>
+
+    <div class="photo-frame frame-5">
+        <div class="photo-content">
+            <img src="merlin12.jpg" alt="Fotbar">
+        </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower flower-red">
+        </div>
+    
+    <div class="photo-frame frame-5">
+        <div class="photo-content">
+            <img src="merlin26.jpg" alt="Fotbar">
+        </div>
+    </div>
+    
+    <div class="photo-frame frame-6">
+        <div class="photo-content">
+            <img src="merlin11.jpg" alt="Fotbar">
+        </div>
+        <img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower flower-orange">
+    </div>
+
+</body>
+</html>

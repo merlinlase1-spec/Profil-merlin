@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TENTANG | MERLIN LASE</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --neon-red: #ff0000;
+            --dark-red: #4a0000;
+            --bg-black: #0a0a0a;
+            --neon-yellow: #ffff00;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGASI (SAMA DENGAN HOME) --- */
+        .navbar {
+            background: rgba(0, 0, 0, 0.95);
+            border-bottom: 2px solid var(--neon-red);
+            padding: 15px 0;
+        }
+        .navbar-brand {
+            color: var(--neon-red) !important;
+            font-weight: bold;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+        }
+        .navbar-toggler { border: none; }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 0, 0, 1)' stroke-width='2' stroke-linecap='round' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+
+        /* --- KONTEN TENTANG --- */
+        .about-section {
+            padding: 120px 20px;
+            background: radial-gradient(circle, var(--dark-red) 0%, var(--bg-black) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-card {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid var(--neon-red);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+            max-width: 900px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+        }
+
+        .profile-frame {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            border: 4px solid var(--neon-yellow);
+            overflow: hidden;
+            box-shadow: 0 0 20px var(--neon-yellow);
+        }
+
+        .profile-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-title {
+            color: var(--neon-red);
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+
+        .about-text {
+            text-align: justify; /* Rata Kanan Kiri */
+            line-height: 1.8;
+            color: #efefef;
+            font-size: 1.1rem;
+        }
+
+        /* SKILL BOXES */
+        .skill-container {
+            margin-top: 30px;
+        }
+        .skill-box {
+            background: var(--neon-yellow);
+            color: #000;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 15px;
+            border: 2px solid #000;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .skill-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px var(--neon-yellow);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MERLIN LASE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">MENU</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tentang.html">TENTANG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="konten.html">KONTEN</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-card">
+                <div class="profile-frame">
+                    <img src="../IMG-20260111-WA0123.jpg" alt="Merlin Lase">
+                </div>
+                
+                <h2 class="about-title">Siapa Merlin Lase?</h2>
+                
+                <p class="about-text">
+                    Halo! Nama saya Merlin Lase. Saya adalah seorang siswa dari kelas <b>XII TKJ 2</b> yang memiliki semangat tinggi dalam mempelajari dunia teknologi informasi. Fokus utama saya adalah pada Teknik Komputer dan Jaringan, di mana saya belajar cara mengelola infrastruktur server, jaringan kabel maupun nirkabel, serta pengembangan web dasar menggunakan HTML dan CSS. Melalui website ini, saya ingin mendokumentasikan perjalanan belajar saya dan berbagi kreativitas dengan teman-teman semua.
+                </p>
+
+                <div class="skill-container">
+                    <div class="row">
+                        <div class="col-6 col-md-4"><div class="skill-box">Networking</div></div>
+                        <div class="col-6 col-md-4"><div class="skill-box">Mikrotik</div></div>
+                        <div class="col-6 col-md-4"><div class="skill-box">Web Design</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
