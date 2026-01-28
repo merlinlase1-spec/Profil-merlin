@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Moments | Merlin Lase</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            /* --- INI BAGIAN YANG KAMU TANYAKAN --- */
+            /* Pastikan nama file gambarnya sama dengan yang ada di folder Acode kamu */
+            background-image: url('merlin14.jpg'); 
+            background-size: cover;      /* Agar gambar menutupi seluruh layar */
+            background-position: center; /* Agar gambar berada di tengah */
+            background-attachment: fixed; /* Agar background tidak ikut bergerak saat di-scroll */
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            padding: 40px 20px;
+        }
+
+        /* Membuat kartu video sedikit transparan agar background estetiknya tetap terlihat */
+        .video-card {
+            background: rgba(255, 255, 255, 0.2); /* Transparan putih tipis */
+            backdrop-filter: blur(10px);         /* Efek blur kaca */
+            border-radius: 25px;
+            padding: 15px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .video-title {
+            text-align: center;
+            color: white; /* Diubah ke putih agar terlihat di background gelap */
+            font-weight: 800;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .video-wrapper {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            background: black;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        .video-caption {
+            padding: 15px 10px 5px 10px;
+            text-align: center;
+            font-weight: 700;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="video-title">🎥 MY VIDEO COLLECTION</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="video2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-caption">With Pak Tata</div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls loop playsinline>
+                            <source src="video5.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-caption">XII TKJ 2</div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls loop playsinline>
+                            <source src="video3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-caption">Bersama Ibu Walkes(Pujiani Halawa)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
