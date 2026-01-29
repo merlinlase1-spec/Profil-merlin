@@ -6,6 +6,47 @@
     <title>Profil Merlin Lase</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* 1. KODE CSS UNTUK NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000; /* Agar navbar tetap di paling depan */
+            box-sizing: border-box;
+        }
+
+        .navbar .brand {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff69b4; /* Pink sesuai tema kamu */
+            text-transform: uppercase;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #ff69b4;
+        }
+
+        /* 2. KODE ASLI KAMU (DENGAN PENYESUAIAN) */
         body, html {
             margin: 0;
             padding: 0;
@@ -14,12 +55,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Ganti 'background_kamu.jpg' dengan nama file fotomu */
             background: url('merlin17.jpg') no-repeat center center fixed;
             background-size: cover;
         }
 
         .profile-container {
+            margin-top: 60px; /* Jarak agar tidak tertutup navbar */
             width: 350px;
             background-color: white;
             border-radius: 30px;
@@ -71,7 +112,6 @@
             color: #888;
         }
 
-        /* KOTAK BIODATA PINK */
         .bio-box {
             margin: 20px auto;
             width: 80%;
@@ -92,10 +132,9 @@
             font-size: 13px;
             color: black;
             line-height: 1.8;
-            text-align: left; /* Agar daftar nama rapi ke kiri */
+            text-align: left;
         }
 
-        /* CONTAINER IKON SOSIAL MEDIA */
         .social-icons {
             margin-top: 20px;
             display: flex;
@@ -105,43 +144,28 @@
 
         .social-icons a {
             text-decoration: none;
-            color: black; /* Warna ikon hitam */
+            color: black;
             font-size: 24px;
             transition: 0.3s;
         }
 
-        /* Efek saat ikon disentuh (hover) */
         .social-icons a:hover {
-            color: #ff69b4; /* Berubah jadi pink saat disentuh */
+            color: #ff69b4;
             transform: scale(1.2);
         }
     </style>
-    </head>
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">MERLIN LASE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#menu">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">contact</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="galeri2.html" id="galeriDrop" data-bs-toggle="dropdown">Galeri</a>
-                        <ul class="dropdown-menu border-0 shadow">
-                            <li><a class="dropdown-item fw-bold" href="galeri2.html">📸 Foto</a></li>
-                            <li><a class="dropdown-item fw-bold" href="video1.html">🎥 Video</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 </head>
 <body>
+
+    <nav class="navbar">
+        <div class="brand">Merlin Lase</div>
+        <div class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="video1.html">Video</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 
     <div class="profile-container">
         <div class="cover-photo"></div>
@@ -172,4 +196,4 @@
     </div>
 
 </body>
-</html>
+    </html>        
