@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Merlin Lase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            /* GANTI URL DI BAWAH DENGAN LINK FOTO KAMU */
+            background: linear-gradient(rgba(255,250,251,0.8), rgba(255,250,251,0.8)), 
+                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333; 
+        }
+        
+        .header { text-align: center; padding: 40px 15px 20px; }
+        .header h1 { font-size: 32px; color: #1a2a44; margin-bottom: 8px; font-weight: 800; }
+        .header p { font-size: 14px; color: #555; max-width: 500px; margin: 0 auto; line-height: 1.6; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 15px; }
+
+        /* GRID KONTAK (2 KOLOM) */
+        .info-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 15px; 
+            margin-bottom: 25px;
+        }
+
+        .info-box { 
+            background: rgba(255, 255, 255, 0.9); /* Transparan dikit agar background tembus */
+            padding: 25px 10px; 
+            text-align: center; 
+            border-radius: 20px; 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(5px); /* Efek kaca kekinian */
+        }
+
+        .info-box i { font-size: 26px; color: #d4a373; margin-bottom: 12px; display: block; }
+        .info-box h3 { font-size: 15px; margin: 5px 0; color: #1a2a44; text-transform: uppercase; }
+        .info-box p { font-size: 13px; color: #666; margin: 0; line-height: 1.4; }
+
+        /* PETA / GOOGLE MAPS */
+        .map-container {
+            width: 100%;
+            height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border: 5px solid white;
+        }
+
+        /* BAGIAN FORM */
+        .form-section { 
+            background: rgba(255, 255, 255, 0.95); 
+            padding: 30px; 
+            border-radius: 25px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+        }
+        .form-section h2 { font-size: 24px; margin-bottom: 20px; text-align: center; color: #1a2a44; }
+        
+        .input-group { margin-bottom: 15px; }
+        input, textarea { 
+            width: 100%; padding: 14px; border: 1px solid #ddd; 
+            border-radius: 12px; background: #fff; font-size: 14px;
+            box-sizing: border-box; outline: none;
+        }
+        input:focus, textarea:focus { border-color: #d4a373; box-shadow: 0 0 5px rgba(212,163,115,0.3); }
+        
+        button { 
+            background: #d4a373; color: white; border: none; padding: 16px; 
+            border-radius: 12px; width: 100%; font-weight: bold; cursor: pointer; 
+            font-size: 16px; transition: 0.3s;
+        }
+        button:hover { background: #bc8a5f; }
+
+        .footer { text-align: center; margin-top: 40px; padding-bottom: 40px; font-size: 12px; color: #777; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Contact Us</h1>
+        <p>Hubungi kami kapan saja, kami siap melayani Anda dengan sepenuh hati.</p>
+    </div>
+
+    <div class="container">
+        <div class="info-grid">
+            <div class="info-box">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Phone</h3>
+                <p>0822-1429-9418</p>
+            </div>
+            <div class="info-box">
+                <i class="fab fa-whatsapp"></i>
+                <h3>Whatsapp</h3>
+                <p>0822-1429-9418</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-envelope-open-text"></i>
+                <h3>Email</h3>
+                <p>merlinlase1@gmail.com</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-house-user"></i> <h3>Alamat</h3>
+                <p> Desa Onozikh6</p> </div>
+        </div>
+        <div class="form-section">
+            <h2>Get In Touch</h2>
+            <form>
+                <div class="input-group"><input type="text" placeholder="Full Name" required></div>
+                <div class="input-group"><input type="email" placeholder="Email Address" required></div>
+                <div class="input-group"><textarea rows="4" placeholder="How can we help you?"></textarea></div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            Developed by Merlin Lase • XII TKJ 2 • 2026
+        </div>
+    </div>
+
+</body>
+</html>
