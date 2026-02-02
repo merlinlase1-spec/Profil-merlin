@@ -10,7 +10,7 @@
         /* --- 1. DASAR & BACKGROUND --- */
         * { box-sizing: border-box; }
         body {
-            background-image: url('merlin28.jpg'); /* Background Kupu-Kupu */
+            background-image: url('merlin28.jpg'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -35,9 +35,8 @@
         }
         .navbar .brand { font-weight: bold; color: #444; text-transform: uppercase; letter-spacing: 2px; }
         .nav-menu a { text-decoration: none; color: #555; margin-left: 15px; font-size: 13px; font-weight: bold; transition: 0.3s; }
-        .nav-menu a:hover { color: #000; }
 
-        /* --- 3. HEADER & PLAY MUSIC (Estetik & Senada Background) --- */
+        /* --- 3. HEADER & PLAY MUSIC (Warna Senada Background) --- */
         .header-section {
             margin-top: 120px;
             padding: 20px;
@@ -46,7 +45,7 @@
         .title-galeri {
             font-size: 26px;
             font-weight: bold;
-            color: #222; /* Warna gelap agar senada kupu-kupu */
+            color: #2c2c2c; /* Warna gelap estetik */
             margin-bottom: 10px;
             display: flex;
             justify-content: center;
@@ -54,42 +53,43 @@
             gap: 10px;
         }
 
-        .heart-icon { color: #444; font-size: 20px; } /* Love warna gelap estetik */
+        /* Ikon Love warna gelap/hitam estetik agar nyambung dengan kupu-kupu */
+        .heart-icon { color: #333; font-size: 20px; } 
 
         .play-music-container {
             display: inline-flex;
             align-items: center;
-            background: rgba(0, 0, 0, 0.7); /* Hitam transparan estetik */
+            background: rgba(44, 44, 44, 0.85); /* Cokelat Tua/Hitam Transparan */
             padding: 10px 25px;
             border-radius: 50px;
             color: #fff;
             cursor: pointer;
             backdrop-filter: blur(5px);
             transition: 0.4s;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
             margin-top: 10px;
         }
 
         .play-music-container:hover {
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 1);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         .play-music-container i { margin-right: 10px; font-size: 16px; }
-        .play-music-container span { font-size: 14px; letter-spacing: 1px; text-transform: uppercase; }
+        .play-music-container span { font-size: 14px; letter-spacing: 1px; text-transform: uppercase; font-weight: bold; }
 
         /* --- 4. GALLERY GRID (3 Foto Per Baris) --- */
         .gallery-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif otomatis */
-            gap: 40px;
-            padding: 40px 10% 80px 10%;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 40px 8% 80px 8%;
             max-width: 1300px;
             margin: 0 auto;
         }
 
-        /* Khusus Layar Laptop (Lebar) Kita Paksa 3 Kolom */
+        /* Memaksa 3 kolom di layar Laptop */
         @media (min-width: 1024px) {
             .gallery-container {
                 grid-template-columns: repeat(3, 1fr); 
@@ -100,22 +100,21 @@
             position: relative;
             background: white;
             padding: 12px 12px 45px 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            transition: 0.4s ease-in-out;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: 0.4s ease;
             border: 1px solid #eee;
         }
 
         .photo-frame:hover {
             transform: scale(1.05) rotate(0deg) !important;
             z-index: 5;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
         }
 
         .photo-content {
             width: 100%;
             aspect-ratio: 4/3;
             overflow: hidden;
-            background: #f9f9f9;
+            background: #f0f0f0;
         }
 
         .photo-content img {
@@ -124,7 +123,7 @@
             object-fit: cover;
         }
 
-        /* Variasi Rotasi Estetik */
+        /* Efek Rotasi Estetik */
         .rot-left { transform: rotate(-2deg); }
         .rot-right { transform: rotate(2deg); }
         .rot-straight { transform: rotate(0deg); }
@@ -140,8 +139,8 @@
         /* --- 5. RESPONSIVE HP --- */
         @media (max-width: 768px) {
             .gallery-container {
-                grid-template-columns: 1fr; /* 1 kolom di HP agar besar */
-                padding: 20px 5%;
+                grid-template-columns: 1fr;
+                padding: 20px 10%;
             }
             .photo-frame { transform: rotate(0deg) !important; }
         }
@@ -171,76 +170,45 @@
             <span id="musicText">Play Musik</span>
         </div>
 
-        <audio id="myAudio" loop>
-            <source src="musik.mp3" type="audio/mpeg">
-        </audio>
+        <video id="myVideo" loop style="display:none;">
+            <source src="video7.mp4" type="video/mp4">
+        </video>
     </div>
 
     <div class="gallery-container">
-        
-        <div class="photo-frame rot-left">
-            <div class="photo-content"><img src="merlin42.jpg"></div>
-            <img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower-icon">
-        </div>
-        <div class="photo-frame rot-straight">
-            <div class="photo-content"><img src="merlin2.jpg"></div>
-        </div>
-        <div class="photo-frame rot-right">
-            <div class="photo-content"><img src="merlin44.jpg"></div>
-            <img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower-icon">
-        </div>
+        <div class="photo-frame rot-left"><div class="photo-content"><img src="merlin42.jpg"></div><img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower-icon"></div>
+        <div class="photo-frame rot-straight"><div class="photo-content"><img src="merlin2.jpg"></div></div>
+        <div class="photo-frame rot-right"><div class="photo-content"><img src="merlin44.jpg"></div><img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower-icon"></div>
 
-        <div class="photo-frame rot-right">
-            <div class="photo-content"><img src="merlin4.jpg"></div>
-        </div>
-        <div class="photo-frame rot-left">
-            <div class="photo-content"><img src="merlin5.jpg"></div>
-            <img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower-icon">
-        </div>
-        <div class="photo-frame rot-straight">
-            <div class="photo-content"><img src="merlin6.jpg"></div>
-        </div>
+        <div class="photo-frame rot-right"><div class="photo-content"><img src="merlin4.jpg"></div></div>
+        <div class="photo-frame rot-left"><div class="photo-content"><img src="merlin5.jpg"></div><img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower-icon"></div>
+        <div class="photo-frame rot-straight"><div class="photo-content"><img src="merlin6.jpg"></div></div>
 
-        <div class="photo-frame rot-left">
-            <div class="photo-content"><img src="merlin7.jpg"></div>
-            <img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower-icon">
-        </div>
-        <div class="photo-frame rot-right">
-            <div class="photo-content"><img src="merlin43.jpg"></div>
-        </div>
-        <div class="photo-frame rot-left">
-            <div class="photo-content"><img src="merlin45.jpg"></div>
-        </div>
+        <div class="photo-frame rot-left"><div class="photo-content"><img src="merlin7.jpg"></div><img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower-icon"></div>
+        <div class="photo-frame rot-right"><div class="photo-content"><img src="merlin43.jpg"></div></div>
+        <div class="photo-frame rot-left"><div class="photo-content"><img src="merlin45.jpg"></div></div>
 
-        <div class="photo-frame rot-straight">
-            <div class="photo-content"><img src="merlin10.jpg"></div>
-        </div>
-        <div class="photo-frame rot-left">
-            <div class="photo-content"><img src="merlin11.jpg"></div>
-            <img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower-icon">
-        </div>
-        <div class="photo-frame rot-right">
-            <div class="photo-content"><img src="merlin12.jpg"></div>
-        </div>
-
+        <div class="photo-frame rot-straight"><div class="photo-content"><img src="merlin10.jpg"></div></div>
+        <div class="photo-frame rot-left"><div class="photo-content"><img src="merlin11.jpg"></div><img src="https://cdn-icons-png.flaticon.com/512/869/869840.png" class="flower-icon"></div>
+        <div class="photo-frame rot-right"><div class="photo-content"><img src="merlin12.jpg"></div></div>
     </div>
 
     <script>
-        const audio = document.getElementById("myAudio");
+        const video = document.getElementById("myVideo");
         const musicIcon = document.getElementById("musicIcon");
         const musicText = document.getElementById("musicText");
 
         function toggleMusic() {
-            if (audio.paused) {
-                audio.play();
+            if (video.paused) {
+                video.play();
                 musicIcon.className = "fas fa-pause";
                 musicText.innerText = "Pause Musik";
             } else {
-                audio.pause();
+                video.pause();
                 musicIcon.className = "fas fa-play";
                 musicText.innerText = "Play Musik";
             }
         }
     </script>
 </body>
-</html>    
+</html>
