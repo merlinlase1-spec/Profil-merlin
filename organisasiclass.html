@@ -6,106 +6,164 @@
     <title>Struktur Organisasi Kelas</title>
     <style>
         :root {
-            /* Ganti link di bawah untuk mengubah gambar background utama */
             --bg-image: url('background1.jpg');
-            --card-bg: rgba(255, 255, 255, 0.9); /* Membuat kartu agak transparan */
+            --card-bg: rgba(255, 255, 255, 0.9);
             --accent-color: #2c3e50;
             --text-color: #333;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), var(--bg-image);
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--bg-image);
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
             color: white;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
         }
 
-        h1 {
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 40px;
-            border-bottom: 3px solid white;
-            padding-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        /* --- NAVIGATION BAR --- */
+        nav {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            box-sizing: border-box;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
+        .nav-logo {
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 1.2em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ddd;
+        }
+
+        /* --- HEADER & MUSIC --- */
+        header {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid white;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .music-container {
+            margin-top: 15px;
+        }
+
+        .btn-play {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: 1px solid white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.8em;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-play:hover {
+            background: white;
+            color: black;
+        }
+
+        /* --- CONTENT CONTAINER --- */
         .container {
-            max-width: 1200px; /* Diperlebar agar muat 4 kartu sejajar */
-            width: 100%;
+            max-width: 1200px;
+            width: 90%;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 30px;
+            padding-bottom: 50px;
         }
 
-        /* Layout Grid */
         .row {
             display: flex;
             justify-content: center;
             gap: 15px;
-            flex-wrap: nowrap; /* Memaksa tetap satu baris di desktop */
+            flex-wrap: nowrap;
             width: 100%;
         }
 
-        /* Style Kartu */
         .card {
             background: var(--card-bg);
-            border-radius: 15px;
-            padding: 12px;
-            width: 200px; /* Ukuran disesuaikan */
+            border-radius: 10px;
+            padding: 10px;
+            width: 200px;
             text-align: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
             transition: transform 0.3s;
             color: var(--text-color);
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-        }
+        .card:hover { transform: translateY(-10px); }
 
         .photo-box {
             width: 100%;
             height: 220px;
             background: #ddd;
-            border-radius: 10px;
+            border-radius: 5px;
             margin-bottom: 10px;
             overflow: hidden;
-            border: 2px solid var(--accent-color);
+            border: 1px solid #ccc;
         }
 
-        .photo-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .photo-box img { width: 100%; height: 100%; object-fit: cover; }
 
         .role {
             font-weight: bold;
-            font-size: 0.85em;
+            font-size: 0.8em;
             color: white;
-            background: var(--accent-color);
-            padding: 5px;
-            border-radius: 5px;
+            background: #34495e;
+            padding: 4px;
+            border-radius: 3px;
             margin-bottom: 8px;
             display: block;
         }
 
-        .name {
-            font-size: 0.95em;
-            font-weight: 700;
-        }
+        .name { font-size: 0.9em; font-weight: 700; }
 
-        /* Foto Bersama */
         .group-photo-section {
-            margin-top: 50px;
+            margin-top: 40px;
             width: 100%;
             text-align: center;
         }
@@ -114,31 +172,48 @@
             width: 100%;
             max-width: 900px;
             margin: 20px auto;
-            border: 8px solid rgba(255,255,255,0.8);
-            border-radius: 20px;
+            border: 5px solid white;
+            border-radius: 15px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             overflow: hidden;
         }
 
-        .group-photo-container img {
-            width: 100%;
-            display: block;
-        }
+        .group-photo-container img { width: 100%; display: block; }
 
-        /* Responsif untuk HP agar tidak hancur */
         @media (max-width: 800px) {
-            .row {
-                flex-wrap: wrap;
-            }
-            .card {
-                width: 45%;
-            }
+            nav { padding: 15px 20px; }
+            .row { flex-wrap: wrap; }
+            .card { width: 45%; }
         }
     </style>
 </head>
 <body>
 
-    <h1>Struktur Organisasi Kelas</h1>
+    <nav>
+        <div class="nav-logo">MERLIN LASE</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="organisasi class.html">Organisasi Class</a>
+            <a href="contact.html">Contact</a>
+            <a href="galeri2.html">Galeri</a>
+            <a href="video1.html">Video</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Struktur Organisasi Kelas</h1>
+        
+        <div class="music-container">
+            <button class="btn-play" onclick="toggleMusic()">
+                <span id="play-icon">▶</span> PLAY MUSIK
+            </button>
+            <audio id="myAudio" loop>
+                <source src="musik.mp3" type="audio/mpeg">
+                Browser kamu tidak mendukung audio.
+            </audio>
+        </div>
+    </header>
 
     <div class="container">
         
@@ -193,8 +268,22 @@
             </div>
             <p><i>"Kebersamaan adalah awal dari kesuksesan."</i></p>
         </div>
-
     </div>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+        var icon = document.getElementById("play-icon");
+
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+                icon.innerHTML = "⏸";
+            } else {
+                audio.pause();
+                icon.innerHTML = "▶";
+            }
+        }
+    </script>
 
 </body>
 </html>
