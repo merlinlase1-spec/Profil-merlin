@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Organisasi Kelas</title>
+    <style>
+        :root {
+            /* Ganti link di bawah untuk mengubah gambar background utama */
+            --bg-image: url('https://images.unsplash.com/photo-1510070112810-d4e9a46d9e91?q=80&w=2069&auto=format&fit=crop');
+            --card-bg: rgba(255, 255, 255, 0.9); /* Membuat kartu agak transparan */
+            --accent-color: #2c3e50;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), var(--bg-image);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            border-bottom: 3px solid white;
+            padding-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .container {
+            max-width: 1200px; /* Diperlebar agar muat 4 kartu sejajar */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* Layout Grid */
+        .row {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: nowrap; /* Memaksa tetap satu baris di desktop */
+            width: 100%;
+        }
+
+        /* Style Kartu */
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 12px;
+            width: 200px; /* Ukuran disesuaikan */
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+            color: var(--text-color);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .photo-box {
+            width: 100%;
+            height: 220px;
+            background: #ddd;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            border: 2px solid var(--accent-color);
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .role {
+            font-weight: bold;
+            font-size: 0.85em;
+            color: white;
+            background: var(--accent-color);
+            padding: 5px;
+            border-radius: 5px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .name {
+            font-size: 0.95em;
+            font-weight: 700;
+        }
+
+        /* Foto Bersama */
+        .group-photo-section {
+            margin-top: 50px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .group-photo-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            border: 8px solid rgba(255,255,255,0.8);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+
+        .group-photo-container img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Responsif untuk HP agar tidak hancur */
+        @media (max-width: 800px) {
+            .row {
+                flex-wrap: wrap;
+            }
+            .card {
+                width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Struktur Organisasi Kelas</h1>
+
+    <div class="container">
+        
+        <div class="row">
+            <div class="card">
+                <span class="role">Wali Kelas</span>
+                <div class="photo-box">
+                    <img src="puji.jpg" alt="Wali Kelas">
+                </div>
+                <div class="name">Pujiani Halawa S.Pd</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <span class="role">Ketua</span>
+                <div class="photo-box">
+                    <img src="agus.jpg" alt="Ketua">
+                </div>
+                <div class="name">Augusman Waruwu</div>
+            </div>
+
+            <div class="card">
+                <span class="role">Wakil Ketua</span>
+                <div class="photo-box">
+                    <img src="safa.jpg" alt="Wakil Ketua">
+                </div>
+                <div class="name">Safa Pria Bernatha</div>
+            </div>
+
+            <div class="card">
+                <span class="role">Sekretaris</span>
+                <div class="photo-box">
+                    <img src="debora.jpg" alt="Sekretaris">
+                </div>
+                <div class="name">Debora Desfrida Harefa</div>
+            </div>
+
+            <div class="card">
+                <span class="role">Bendahara</span>
+                <div class="photo-box">
+                    <img src="merlin47.jpg" alt="Bendahara">
+                </div>
+                <div class="name">Merlin Lase</div>
+            </div>
+        </div>
+
+        <div class="group-photo-section">
+            <h2>Foto Bersama Teman Sekelas</h2>
+            <div class="group-photo-container">
+                <img src="merlin11.jpg" alt="Foto Bersama">
+            </div>
+            <p><i>"Kebersamaan adalah awal dari kesuksesan."</i></p>
+        </div>
+
+    </div>
+
+</body>
+</html>
